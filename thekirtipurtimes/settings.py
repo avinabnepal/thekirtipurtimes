@@ -80,12 +80,14 @@ WSGI_APPLICATION = 'thekirtipurtimes.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://abhinavnepal_user:JMVzhDgGVx68EDnDs5U9Fa9ma8lu3AnA@dpg-chfhp1bhp8u065pkmla0-a/abhinavnepal',
+    'default': dj_database_url.parse(
+        'postgres://abhinavnepal_user:JMVzhDgGVx68EDnDs5U9Fa9ma8lu3AnA@dpg-chfhp1bhp8u065pkmla0-a/abhinavnepal',
         conn_max_age=600
-    )
+    ),
+    'OPTIONS': {
+        'engine': 'django.db.backends.postgresql',
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
