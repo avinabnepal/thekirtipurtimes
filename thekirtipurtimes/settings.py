@@ -81,12 +81,8 @@ WSGI_APPLICATION = 'thekirtipurtimes.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.parse(
-        'postgres://abhinavnepal_user:JMVzhDgGVx68EDnDs5U9Fa9ma8lu3AnA@dpg-chfhp1bhp8u065pkmla0-a/abhinavnepal',
-        conn_max_age=600
-    ),
-    'OPTIONS': {
-        'engine': 'django.db.backends.postgresql',
-    }
+        'postgres://the_kirtipur_times_user:33LNZZ4A9FX81Gcv5gVYoLBMi5JT8UGS@dpg-chgev2ik728sd6k00fdg-a.ohio-postgres.render.com/the_kirtipur_times'
+    )
 }
 
 # Password validation
